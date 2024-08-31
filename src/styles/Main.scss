@@ -1,0 +1,23 @@
+@import "GlobalReset";
+@import "variables";
+@import "Navbar";
+@import "Hero";
+@import "Pricing";
+@import "Testimonial";
+@import "Faq";
+@import "Contact";
+@import "Footer";
+.button {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid $lightGrey;
+  background: $secondary;
+  color: $lightGrey;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: $secondary;
+  background: $lightGrey;
+}

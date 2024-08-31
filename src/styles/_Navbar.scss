@@ -1,0 +1,82 @@
+.navbar {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 2.2rem;
+  background-color: $veryLightGrey;
+  box-shadow: $shadow_1;
+  .logo {
+    img {
+      height: 3.6rem;
+      width: auto;
+      cursor: pointer;
+    }
+  }
+  .nav-menu {
+    display: flex;
+    gap: 1rem;
+    .nav-item {
+      padding-inline: 1rem;
+      font-weight: 500;
+      font-size: 1.2rem;
+      padding: 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $lightGrey;
+        color: deeppink;
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    position: absolute;
+    right: 1.5rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: space-around;
+    .logo {
+      img {
+        height: 3.6rem;
+        width: auto;
+        cursor: pointer;
+      }
+    }
+    .nav-menu {
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      background-color: $mediumGrey;
+      justify-self: center;
+      text-align: center;
+      width: 21.275rem;
+      height: 100%;
+      padding-top: 2rem;
+      top: -100%;
+      right: 0;
+      z-index: 100;
+      transition: top 0.7s;
+      &.active {
+        display: flex; // Show when active
+        top: 16.6%; // Adjust top position when active
+        transition: top 0.7s ease-in;
+      }
+      .nav-item {
+        color: #fff;
+      }
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+}
